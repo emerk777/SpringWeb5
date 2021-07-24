@@ -25,12 +25,6 @@ public class BootStrapData implements CommandLineRunner{
     private final BookRepository bookRepository;
     private final PublisherRepository publisherRepository;
 
-    /*    
-    public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository) {
-    this.authorRepository = authorRepository;
-    this.bookRepository = bookRepository;
-    }
-    */
 
     public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
         this.authorRepository = authorRepository;
@@ -50,7 +44,6 @@ public class BootStrapData implements CommandLineRunner{
         
         publisherRepository.save(publisher);
         System.out.println("Publisher Count: " + publisherRepository.count());
-        
         
         Author eric = new Author("Erick", "Evans");
         Book ddd = new Book("Domain Diven Design", "1234567");
